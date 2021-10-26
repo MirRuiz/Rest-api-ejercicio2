@@ -1,18 +1,11 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
-// import {
-//   TextFieldComponent,
-//   RatingComponent,
-// } from 'common/components';
-// import { Button } from '@material-ui/core';
 import { formValidation } from './character.validations';
 import { Character } from './character.vm';
 import * as classes from './character.styles';
 import Avatar from '@material-ui/core/Avatar';
-import Typography from '@material-ui/core/Typography'
-
-// import { Lookup } from 'common/models';
-
+import Typography from '@material-ui/core/Typography';
+import { TextFieldComponent } from 'common/components';
 
 interface Props {
   character: Character;
@@ -29,11 +22,10 @@ export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
       enableReinitialize={true}
       validate={formValidation.validateForm}
     >
-  
       {() => (
         <div className={classes.root}>
-          <Avatar alt={character.name} src={character.image}  />
-          <Form >
+          <Avatar alt={character.name} src={character.image} />
+          <Form>
             <Typography variant="subtitle1" gutterBottom>
               Name: {character.name}
             </Typography>
@@ -49,6 +41,13 @@ export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
             <Typography variant="subtitle1" gutterBottom>
               Location: {character.location}
             </Typography>
+            <TextFieldComponent
+              name="bestSentence"
+              label="bestSentence"
+              multiline={true}
+              minRows={5}
+              maxRows={15}
+            />
           </Form>
         </div>
       )}

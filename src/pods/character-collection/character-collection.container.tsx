@@ -16,9 +16,14 @@ export const CharacterCollectionContainer = () => {
     history.push(linkRoutes.editCharacter(id));
   };
 
+  const handleCreateCharacter = () => {
+    history.push(linkRoutes.createCharacter);
+  };
+
   return (
     <CharacterCollectionComponent
       characterCollection={characterCollection}
+      onCreateCharacter={handleCreateCharacter}
       onEdit={handleEdit}
 
     />

@@ -12,12 +12,17 @@ export const RouterComponent: React.FunctionComponent = () => {
           path={[switchRoutes.root, switchRoutes.characterCollection]}
           component={CharacterCollectionScene}
         />
-      
+
         <Route
           exact={true}
           path={switchRoutes.editCharacter}
           component={CharacterScene}
         />
+         {/* <Route
+          exact={true}
+          path={switchRoutes.detailCharacter}
+          component={CharacterScene}
+        /> */}
       </Switch>
     </HashRouter>
   );

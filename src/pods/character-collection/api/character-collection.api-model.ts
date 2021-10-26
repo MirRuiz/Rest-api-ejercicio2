@@ -1,3 +1,8 @@
+
+export interface GetResponse {
+  results: CharacterEntityApi[],
+}
+
 export interface CharacterEntityApi {
   id: number;
   name: string;
