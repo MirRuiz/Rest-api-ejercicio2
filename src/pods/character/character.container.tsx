@@ -2,12 +2,16 @@ import React from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import * as api from './api';
 import { createEmptyCharacter, Character } from './character.vm';
-import { mapCharacterFromApiToVm, mapCharacterFromVmToApi } from './character.mappers';
+import {
+  mapCharacterFromApiToVm,
+  mapCharacterFromVmToApi,
+} from './character.mappers';
 import { CharacterComponent } from './character.component';
 
-
 export const CharacterContainer: React.FunctionComponent = (props) => {
-  const [character, setCharacter] = React.useState<Character>(createEmptyCharacter());
+  const [character, setCharacter] = React.useState<Character>(
+    createEmptyCharacter()
+  );
   const { id } = useParams();
   const history = useHistory();
 
@@ -23,6 +27,7 @@ export const CharacterContainer: React.FunctionComponent = (props) => {
   }, []);
 
   const handleSave = async (character: Character) => {
+    console.log(11);
     const apiCharacter = mapCharacterFromVmToApi(character);
     const success = await api.saveCharacter(apiCharacter);
     if (success) {
@@ -32,5 +37,5 @@ export const CharacterContainer: React.FunctionComponent = (props) => {
     }
   };
 
-  return <CharacterComponent character={character}  onSave={handleSave} />;
+  return <CharacterComponent character={character} onSave={handleSave} />;
 };

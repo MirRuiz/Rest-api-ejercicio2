@@ -11,6 +11,8 @@ export const mapCharacterFromApiToVm = (
   species: character.species,
   origin: character.origin.name,
   location: character.location.name,
+  bestSentence: character.bestSentence,
+
 
 
 });
@@ -29,6 +31,7 @@ export const mapCharacterFromVmToApi = (character: viewModel.Character): apiMode
     location:{
       name: character.name,
       url:'',
-    }
+    },
+    bestSentence: character.bestSentence,
 
   } as unknown) as apiModel.Character);

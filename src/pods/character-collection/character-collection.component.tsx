@@ -13,13 +13,11 @@ interface Props {
 export const CharacterCollectionComponent: React.FunctionComponent<Props> = (
   props
 ) => {
-  const { characterCollection, onEdit, onCreateCharacter } = props;////////////////////////////////
+  const { characterCollection, onEdit } = props;////////////////////////////////
 
   return (
     <div className={classes.root}>
-       <Button variant="contained" color="primary" onClick={onCreateCharacter}>
-        Add character
-      </Button>
+
       <ul className={classes.list}>
         {characterCollection.map((character) => (
           <li key={character.id}>

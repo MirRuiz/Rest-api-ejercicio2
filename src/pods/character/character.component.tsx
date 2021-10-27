@@ -6,10 +6,12 @@ import * as classes from './character.styles';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import { TextFieldComponent } from 'common/components';
+import { Button } from '@material-ui/core';
 
 interface Props {
   character: Character;
   onSave: (character: Character) => void;
+
 }
 
 export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
@@ -48,6 +50,9 @@ export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
               minRows={5}
               maxRows={15}
             />
+             <Button type="submit" variant="contained" color="primary">
+              Save
+            </Button>
           </Form>
         </div>
       )}
