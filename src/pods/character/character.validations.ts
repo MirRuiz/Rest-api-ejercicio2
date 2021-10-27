@@ -14,6 +14,7 @@ const validationSchema: ValidationSchema = {
     ],
     address: [Validators.required],
     city: [Validators.required],
+    bestSentence: [Validators.required]
   },
 };
 

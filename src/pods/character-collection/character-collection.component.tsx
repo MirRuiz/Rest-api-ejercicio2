@@ -2,7 +2,6 @@ import * as React from 'react';
 import { CharacterEntityVm } from './character-collection.vm';
 import { CharacterCard } from './components/character-card.component';
 import * as classes from './character-collection.styles';
-import { Button } from '@material-ui/core';
 
 interface Props {
   characterCollection: CharacterEntityVm[];
@@ -13,15 +12,14 @@ interface Props {
 export const CharacterCollectionComponent: React.FunctionComponent<Props> = (
   props
 ) => {
-  const { characterCollection, onEdit } = props;////////////////////////////////
+  const { characterCollection, onEdit } = props;
 
   return (
     <div className={classes.root}>
-
       <ul className={classes.list}>
         {characterCollection.map((character) => (
           <li key={character.id}>
-            <CharacterCard character={character} onEdit={onEdit}  />
+            <CharacterCard character={character} onEdit={onEdit} />
           </li>
         ))}
       </ul>

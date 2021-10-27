@@ -1,12 +1,12 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
-import { formValidation } from './character.validations';
 import { Character } from './character.vm';
 import * as classes from './character.styles';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import { TextFieldComponent } from 'common/components';
 import { Button } from '@material-ui/core';
+import { formValidation } from './character.validations';
 
 interface Props {
   character: Character;
@@ -22,12 +22,11 @@ export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
       onSubmit={onSave}
       initialValues={character}
       enableReinitialize={true}
-      validate={formValidation.validateForm}
     >
       {() => (
         <div className={classes.root}>
           <Avatar alt={character.name} src={character.image} />
-          <Form>
+          <Form >
             <Typography variant="subtitle1" gutterBottom>
               Name: {character.name}
             </Typography>
@@ -47,10 +46,10 @@ export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
               name="bestSentence"
               label="bestSentence"
               multiline={true}
-              minRows={5}
               maxRows={15}
+
             />
-             <Button type="submit" variant="contained" color="primary">
+             <Button type="submit" variant="contained" color="primary" onClick={()=>onSave(character)}>
               Save
             </Button>
           </Form>

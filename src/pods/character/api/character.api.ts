@@ -7,28 +7,14 @@ export const getCharacter = (id: number): Promise<Character> => {
 };
 
 export const saveCharacter = (character: Character): any => {
-  console.log('OPOPOP');
   const method = {
-    method: 'POST',
+    method: 'PUT',
     body: JSON.stringify(character),
     headers: {
-      'Content-type': 'aplication/json',
+      'Content-type': 'application/json',
     },
   };
   return fetch(`${characterUrl}/${character.id}`, method).then((response) =>
-    console.log(response)
+    response.json()
   );
 };
-
-// export const saveCharacter = async (character: Character): Promise<boolean> => {
-//   return true;
-// };
-
-// export const saveCharacter = async (character: Character): Promise<boolean> => {
-//   if (character.id) {
-//     await Axios.put<Character>(`${characterUrl}/${character.id}`, character);
-//   } else {
-//     await Axios.post<Character>(characterUrl, character);
-//   }
-//   return true;
-// };

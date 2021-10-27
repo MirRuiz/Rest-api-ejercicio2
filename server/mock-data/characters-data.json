@@ -8,12 +8,12 @@
       "type": "",
       "gender": "Male",
       "origin": {
-        "name": "Earth",
-        "url": "https://rickandmortyapi.com/api/location/1"
+        "name": "Rick Sanchez",
+        "url": ""
       },
       "location": {
-        "name": "Earth",
-        "url": "https://rickandmortyapi.com/api/location/20"
+        "name": "Rick Sanchez",
+        "url": ""
       },
       "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
       "episode": [
@@ -22,7 +22,7 @@
       ],
       "url": "https://rickandmortyapi.com/api/character/1",
       "created": "2017-11-04T18:48:46.250Z",
-      "bestSentence": ""
+      "bestSentence": "tyy"
     },
     {
       "id": 2,
@@ -32,12 +32,12 @@
       "type": "",
       "gender": "Male",
       "origin": {
-        "name": "Earth",
-        "url": "https://rickandmortyapi.com/api/location/1"
+        "name": "Morty Smith",
+        "url": ""
       },
       "location": {
-        "name": "Earth",
-        "url": "https://rickandmortyapi.com/api/location/20"
+        "name": "Morty Smith",
+        "url": ""
       },
       "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
       "episode": [
@@ -46,7 +46,7 @@
       ],
       "url": "https://rickandmortyapi.com/api/character/2",
       "created": "2017-11-04T18:50:21.651Z",
-      "bestSentence": ""
+      "bestSentence": "f"
     }
   ]
 }
